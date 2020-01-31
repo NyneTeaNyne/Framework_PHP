@@ -1,7 +1,3 @@
-<?php
-header("Content-type: text/css; charset: UTF-8");
-?>
-
 #header {
     padding: 40px 50px 40px 50px;
     color: purple;

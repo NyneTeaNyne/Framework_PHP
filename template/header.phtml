@@ -1,5 +1,14 @@
-<link rel='stylesheet' type='text/css' href='css/style.php' />
+<html>
+<?php
+    foreach($this->getCss() as $css){
+        echo('<link rel=\'stylesheet\' type=\'text/css\' href=\'css/' . $css . '\' />');
+    }
 
-<div id="header">
-    <h1>Ceci est un Titre</h1>
-</div>
+    foreach ($this->getJs() as $js){
+        echo('<script type=\'text/javascript\' src=\'js/' . $js . '\'></script>');
+    }
+?>
+    <body>
+        <div id="header">
+            <h1>Ceci est un Titre</h1>
+        </div>

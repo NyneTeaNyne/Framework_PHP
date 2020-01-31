@@ -11,6 +11,9 @@ abstract class ControllerAbstract implements ControllerInterface {
 
     private $error;
 
+    private $css = [];
+    private $js = [];
+
     /**
      * Permet de lancer le rendu de la page à afficher
      */
@@ -30,6 +33,8 @@ abstract class ControllerAbstract implements ControllerInterface {
         $this->setHeader(self::HEADER);
         $this->setBody($template);
         $this->setFooter(self::FOOTER);
+        $this->addCss('style.css');
+        $this->addJs('script.js');
         return $this;
     }
 
@@ -101,5 +106,21 @@ abstract class ControllerAbstract implements ControllerInterface {
     {
         $this->error = $error;
         return $this;
+    }
+
+    public function getCss(){
+        return $this->css;
+    }
+
+    public function getJs(){
+        return $this->js;
+    }
+
+    public function addCss($css){
+        array_push($this->css, $css);
+    }
+
+    public function addJs($js){
+        array_push($this->js, $js);
     }
 }
