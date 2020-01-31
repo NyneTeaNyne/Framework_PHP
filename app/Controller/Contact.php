@@ -11,3 +11,4 @@ class Contact extends ControllerAbstract {
         $this->render();
     }
 }
+

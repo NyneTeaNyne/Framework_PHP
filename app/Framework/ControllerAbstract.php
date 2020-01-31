@@ -1,6 +1,8 @@
 <?php
 namespace App\Framework;
 
+use mysql_xdevapi\Exception;
+
 abstract class ControllerAbstract implements ControllerInterface {
     const FOOTER = 'footer.phtml';
     const HEADER = 'header.phtml';
@@ -13,6 +15,12 @@ abstract class ControllerAbstract implements ControllerInterface {
 
     private $css = [];
     private $js = [];
+
+    public function __construct(){
+        if(!$this->checkMethod()){
+            throw new \Exception('La méthode d\'accés n\'est pas correcte');
+        }
+    }
 
     /**
      * Permet de lancer le rendu de la page à afficher
@@ -36,6 +44,10 @@ abstract class ControllerAbstract implements ControllerInterface {
         $this->addCss('style.css');
         $this->addJs('script.js');
         return $this;
+    }
+
+    public function checkMethod(){
+        return true;
     }
 
     /**
