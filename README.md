@@ -1,6 +1,11 @@
 # Framework_PHP
-# Accès au formulaire 'Contact' :
-https://localhost/contact
+
+# Accès aux pages :
+https://localhost/contact - Formulaire d'ajout
+
+https://localhost/contact/list - Affiche la liste des customers
+
+https://localhost/contact/{id} - Affiche l'utilisateur possédant l'id
 
 # Travail effectué
 
@@ -17,3 +22,9 @@ Ajout de la gestion des fichiers CSS / JS aux ControllerAbstract.
 Ajout d'une page d'erreur si le chemin d'accès est érroné.
 
 Création des pages .phtml pour les pages error, contact et action, ainsi que les header et footer.
+
+Ajout d'une classe CustomerRepository pour pouvoir lier la base de donnée et les models.
+
+Modification du Router pour pouvoir passer des expressions régulière et récupérer des paramètres.
+
+Ajout de nouveaux controller pour accéder à plusieurs URL.
