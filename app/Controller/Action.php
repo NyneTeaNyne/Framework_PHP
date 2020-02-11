@@ -1,8 +1,9 @@
 <?php
 namespace App\Controller;
 
-use App\Customer;
+use App\Model\Customer;
 use App\Framework\ControllerPost;
+use App\Model\Repository\CustomerRepository;
 
 class Action extends ControllerPost {
     const TEMPLATE = 'action.phtml';
@@ -17,6 +18,9 @@ class Action extends ControllerPost {
         $age = $this->getParam('age');
 
         $this->customer = new Customer($lastname, $firstname, $age);
+
+        $repo = new CustomerRepository();
+        $repo->save($this->customer);
 
         $this->render();
     }
