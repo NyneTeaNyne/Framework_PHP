@@ -7,7 +7,7 @@ https://localhost/contact/list - Affiche la liste des customers
 
 https://localhost/contact/{id} - Affiche l'utilisateur possédant l'id
 
-https://http://localhost/param1/test1/param2/test2/test3/test4 - Multiple paramètres
+https://localhost/param1/test1/param2/test2/test3/test4 - Multiple paramètres
 
 # Travail effectué
 
