@@ -1,13 +1,13 @@
 # Framework_PHP
 
 # Accès aux pages :
-https://localhost/contact - Formulaire d'ajout
+http://localhost/contact - Formulaire d'ajout
 
-https://localhost/contact/list - Affiche la liste des customers
+http://localhost/contact/list - Affiche la liste des customers
 
-https://localhost/contact/{id} - Affiche l'utilisateur possédant l'id
+http://localhost/contact/{id} - Affiche l'utilisateur possédant l'id
 
-https://localhost/param1/test1/param2/test2/test3/test4 - Multiple paramètres
+http://localhost/param1/test1/param2/test2/test3/test4 - Multiple paramètres
 
 # Travail effectué
 
