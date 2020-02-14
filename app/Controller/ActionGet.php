@@ -14,7 +14,7 @@ class ActionGet extends ControllerGet
         $this->loadLayout(self::TEMPLATE);
 
         $repo = new CustomerRepository();
-        $this->customer = $repo->get($id);
+        $this->customer = $repo->get($id['id']);
 
         $this->render();
     }
