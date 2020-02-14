@@ -9,7 +9,7 @@ class Error extends ControllerAbstract {
 
     public function error($error){
         $this->loadLayout(self::TEMPLATE);
-        $this->setError($error);
+        $this->setError($error[0]);
         $this->render();
     }
 }

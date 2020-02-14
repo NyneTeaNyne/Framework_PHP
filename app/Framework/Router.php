@@ -19,7 +19,7 @@ class Router{
             call_user_func([new $this->class, $this->method], $this->parameters);
         } catch (\Exception $e){
             $params = array($e->getMessage());
-            call_user_func_array([new $this->class, $this->method], $params);
+            call_user_func([new $this->class, $this->method], $params);
             die;
         }
     }
@@ -52,22 +52,17 @@ class Router{
             $dyn = explode( '/', $key);
             if(count($uri) == count($dyn)) {
                 foreach ($uri as $i => $v) {
-                    if (isset($dyn[$i])) {
-                        if (strcasecmp($v, $dyn[$i]) != 0) {
-                            if (strpos($dyn[$i], '{') != 0 && strpos($dyn[$i], '}') != 0) {
-                                $this->parameters = [];
-                                break;
-                            } else {
-                                $param = str_replace('}', '', str_replace('{', '', $dyn[$i]));
-                                $this->parameters[$param] = $v;
-                                $route = $val;
-                                $this->class = array_shift($route);
-                                $this->method = array_shift($route);
-                            }
+                    if (strcasecmp($v, $dyn[$i]) != 0) {
+                        if (strpos($dyn[$i], '{') != 0 && strpos($dyn[$i], '}') != 0) {
+                            $this->parameters = [];
+                            break;
+                        } else {
+                            $param = str_replace('}', '', str_replace('{', '', $dyn[$i]));
+                            $this->parameters[$param] = $v;
+                            $route = $val;
+                            $this->class = array_shift($route);
+                            $this->method = array_shift($route);
                         }
-                    } else {
-                        $this->parameters = [];
-                        break;
                     }
                 }
             }
