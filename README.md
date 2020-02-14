@@ -7,6 +7,8 @@ https://localhost/contact/list - Affiche la liste des customers
 
 https://localhost/contact/{id} - Affiche l'utilisateur possédant l'id
 
+https://http://localhost/param1/test1/param2/test2/test3/test4 - Multiple paramètres
+
 # Travail effectué
 
 Création d'un Autoloader permettant de Charger les classes lors de leur utilisation.
@@ -28,3 +30,7 @@ Ajout d'une classe CustomerRepository pour pouvoir lier la base de donnée et le
 Modification du Router pour pouvoir passer des expressions régulière et récupérer des paramètres.
 
 Ajout de nouveaux controller pour accéder à plusieurs URL.
+
+Modification de la gestion des routes pour pouvoir utiliser des url tel quel "/contact/{id}" dans le fichier routes.php
+
+Ajout d'une page pour tester les paramètres mutliples.
